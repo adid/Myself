@@ -15,8 +15,12 @@ public class UserInfo {
     private String maritalStatus;
     private String nationality;
 
+    private int income;
+
+    private String currency;
+
     public UserInfo(String username, String firstName, String lastName, Date dateOfBirth, String placeOfBirth, String address,
-                           String phoneNumber, String email, String sex, String maritalStatus, String nationality)
+                           String phoneNumber, String email, String sex, String maritalStatus, String nationality,int income, String currency)
     {
         this.username= username;
         this.firstName = firstName;
@@ -29,6 +33,8 @@ public class UserInfo {
         this.sex = sex;
         this.maritalStatus = maritalStatus;
         this.nationality = nationality;
+        this.income= income;
+        this.currency= currency;
     }
 
     public String getUsername() {
@@ -117,6 +123,22 @@ public class UserInfo {
 
     public void setNationality(String nationality) {
         this.nationality = nationality;
+    }
+
+    public int getIncome() {
+        return income;
+    }
+
+    public void setIncome(int income) {
+        this.income = income;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+public void setCurrency(String currency) {
+        this.currency = currency;
     }
 }
 

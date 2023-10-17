@@ -14,8 +14,30 @@ public class CreateUser
         this.userInfo= userInfo;
     }
 
-    public boolean checkAccount(User user) {
+    public boolean checkAccount() {
         String path = "C:\\SPL\\Data";
+        File folder = new File(path);
+
+        // Check if the username already exists
+        String userDirectoryPath = path + "\\" + user.getUsername();
+        File userDirectory = new File(userDirectoryPath);
+        if (userDirectory.exists() && userDirectory.isDirectory()) {
+            System.out.println("Username already exists. Please choose a different username.");
+            return false;
+        }
+
+        // Check if the password meets the criteria
+        String password = user.getPassword();
+        if (!isStrongPassword(password)) {
+            System.out.println("Password must contain at least one uppercase letter, one lowercase letter, and one digit.");
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean isStrongPassword(String password) {
+        return password.matches(".*[A-Z].*") && password.matches(".*[a-z].*") && password.matches(".*\\d.*");
     }
 
     public void createUserFile(){
