@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -15,15 +16,20 @@ public class Main {
         String username = scanner.nextLine();
 
         String password = null;
+        String confirmPassword;
         boolean validPassword = false;
+
         while (!validPassword) {
             System.out.print("Enter a password: ");
             password = scanner.nextLine();
 
-            if (isStrongPassword(password)) {
+            System.out.print("Confirm password: ");
+            confirmPassword = scanner.nextLine();
+
+            if (password.equals(confirmPassword) && isStrongPassword(password)) {
                 validPassword = true;
             } else {
-                System.out.println("Password must contain at least one uppercase letter, one lowercase letter, and one digit. Please try again.");
+                System.out.println("Passwords do not match or password is not strong enough. Please try again.");
             }
         }
 
@@ -87,4 +93,8 @@ public class Main {
     public static boolean isStrongPassword(String password) {
         return password.matches(".*[A-Z].*") && password.matches(".*[a-z].*") && password.matches(".*\\d.*");
     }
+
+
+
+
 }
