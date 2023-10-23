@@ -43,12 +43,12 @@ public class CreateUser
 
 
     public void createUserFile(){
-        String path = "C:\\SPL\\Data"+ user.getUsername();
+        String path = "C:\\SPL\\Data\\"+ user.getUsername();
         File folder= new File(path);
         folder.mkdir();
     }
     public void createPasswordFile() throws IOException {
-        String path = "C:\\SPL\\Data"+ user.getUsername()+"\\Password.txt";
+        String path = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Password.txt";
         File passFile= new File(path);
 
         FileWriter myWriter = new FileWriter(passFile);
@@ -58,7 +58,7 @@ public class CreateUser
 
 
     public void createInfoFile() throws IOException {
-        String path = "C:\\SPL\\Data"+ user.getUsername()+"\\UserInfo.txt";
+        String path = "C:\\SPL\\Data\\"+ user.getUsername()+"\\UserInfo.txt";
         File infoFile= new File(path);
 
         FileWriter writer = new FileWriter(infoFile);
@@ -90,7 +90,7 @@ public class CreateUser
     }
 
     public void createBalanceFile() throws IOException {
-        String path = "C:\\SPL\\Data"+ user.getUsername()+"\\Current_Balance.txt";
+        String path = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Current_Balance.txt";
         File balanceFile= new File(path);
 
         Double balance= 0.00;
@@ -100,10 +100,47 @@ public class CreateUser
         myWriter.close();
     }
 
+    public void createLoanFile() throws IOException {
+        String path = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Loan_Balance.txt";
+        File balanceFile= new File(path);
+
+        Double balance= 0.00;
+
+        FileWriter myWriter = new FileWriter(balanceFile);
+        myWriter.write(Double.toString(balance));
+        myWriter.close();
+    }
+
+    public void createTransactionFile() throws IOException {
+        String path = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Transactions";
+        File folder= new File(path);
+        folder.mkdir();
+
+        String path0 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Transactions\\Transaction_no.txt";
+        String path1 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Transactions\\Date.txt";
+        String path2 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Transactions\\Transaction_Type.txt";
+        String path3 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Transactions\\Amount.txt";
+        String path4 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Transactions\\Description.txt";
+
+        File noFile= new File(path0);
+        File dateFile= new File(path1);
+        File typeFile= new File(path2);
+        File amountFile= new File(path3);
+        File descriptionFile= new File(path4);
+
+        FileWriter myWriter0 = new FileWriter(noFile);
+        FileWriter myWriter1 = new FileWriter(dateFile);
+        FileWriter myWriter2 = new FileWriter(typeFile);
+        FileWriter myWriter3 = new FileWriter(amountFile);
+        FileWriter myWriter4 = new FileWriter(descriptionFile);
+    }
+
     public void createAccount() throws IOException {
         createUserFile();
         createPasswordFile();
         createInfoFile();
         createBalanceFile();
+        createLoanFile();
+        createTransactionFile();
     }
 }

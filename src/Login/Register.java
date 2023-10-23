@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 
-public class Main {
+public class Register {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -93,8 +93,4 @@ public class Main {
     public static boolean isStrongPassword(String password) {
         return password.matches(".*[A-Z].*") && password.matches(".*[a-z].*") && password.matches(".*\\d.*");
     }
-
-
-
-
 }
