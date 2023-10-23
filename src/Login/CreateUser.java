@@ -2,6 +2,7 @@ package Login;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Date;
 
 public class CreateUser
 {
@@ -54,19 +55,55 @@ public class CreateUser
         myWriter.write(user.getPassword());
         myWriter.close();
     }
+
+
     public void createInfoFile() throws IOException {
         String path = "C:\\SPL\\Data"+ user.getUsername()+"\\UserInfo.txt";
         File infoFile= new File(path);
 
         FileWriter writer = new FileWriter(infoFile);
-        writer.write("Adid");
-        writer.append("210042172");
+        writer.write(userInfo.getUsername());
+        writer.append("\n");
+        writer.append(userInfo.getFirstName());
+        writer.append("\n");
+        writer.append(userInfo.getLastName());
+        writer.append("\n");
+        writer.append(userInfo.getPlaceOfBirth());
+        writer.append("\n");
+        writer.append(userInfo.getAddress());
+        writer.append("\n");
+        writer.append(userInfo.getPhoneNumber());
+        writer.append("\n");
+        writer.append(userInfo.getEmail());
+        writer.append("\n");
+        writer.append(userInfo.getSex());
+        writer.append("\n");
+        writer.append(userInfo.getMaritalStatus());
+        writer.append("\n");
+        writer.append(userInfo.getNationality());
+        writer.append("\n");
+        writer.append(Double.toString(userInfo.getIncome()));
+        writer.append("\n");
+        writer.append(userInfo.getCurrency());
+        writer.append("\n");
         writer.close();
+    }
+
+    public void createBalanceFile() throws IOException {
+        String path = "C:\\SPL\\Data"+ user.getUsername()+"\\Current_Balance.txt";
+        File balanceFile= new File(path);
+
+        Double balance= 0.00;
+
+        FileWriter myWriter = new FileWriter(balanceFile);
+        myWriter.write(Double.toString(balance));
+        myWriter.close();
     }
 
     public void createAccount() throws IOException {
         createUserFile();
         createPasswordFile();
         createInfoFile();
+        createBalanceFile();
     }
 }
