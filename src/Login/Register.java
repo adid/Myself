@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 
 public class Register {
-    public static void main(String[] args) {
+    public void register() {
         Scanner scanner = new Scanner(System.in);
 
         // Get user input for username and password

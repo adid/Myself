@@ -15,28 +15,6 @@ public class CreateUser
         this.userInfo= userInfo;
     }
 
-    public boolean checkAccount() {
-        String path = "C:\\SPL\\Data";
-        File folder = new File(path);
-
-        // Check if the username already exists
-        String userDirectoryPath = path + "\\" + user.getUsername();
-        File userDirectory = new File(userDirectoryPath);
-        if (userDirectory.exists() && userDirectory.isDirectory()) {
-            System.out.println("Username already exists. Please choose a different username.");
-            return false;
-        }
-
-        // Check if the password meets the criteria
-        String password = user.getPassword();
-        if (!isStrongPassword(password)) {
-            System.out.println("Password must be of atleast 6 characters and contain at least one uppercase letter, one lowercase letter, and one digit.");
-            return false;
-        }
-
-        return true;
-    }
-
     public boolean isStrongPassword(String password) {
         return password.matches(".*[A-Z].*") && password.matches(".*[a-z].*") && password.matches(".*\\d.*") && password.length() >= 6;
     }
@@ -135,12 +113,36 @@ public class CreateUser
         FileWriter myWriter4 = new FileWriter(descriptionFile);
     }
 
+    public boolean checkUser() {
+        String path = "C:\\SPL\\Data";
+
+        // Check if the username already exists
+        String userDirectoryPath = path + "\\" + user.getUsername();
+        File userDirectory = new File(userDirectoryPath);
+        if (userDirectory.exists() && userDirectory.isDirectory()) {
+            System.out.println("Username already exists. Please choose a different username.");
+            return false;
+        }
+        return true;
+    }
+
+    public boolean checkPassword(){
+        String password = user.getPassword();
+        if (!isStrongPassword(password)) {
+            System.out.println("Password must be of atleast 6 characters and contain at least one uppercase letter, one lowercase letter, and one digit.");
+            return false;
+        }
+        return true;
+    }
+
     public void createAccount() throws IOException {
+        while (checkUser() && checkPassword()){
         createUserFile();
         createPasswordFile();
         createInfoFile();
         createBalanceFile();
         createLoanFile();
         createTransactionFile();
+        }
     }
 }

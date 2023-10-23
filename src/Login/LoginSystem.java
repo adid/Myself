@@ -1,45 +1,49 @@
 package Login;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.io.*;
 
 public class LoginSystem {
-    // JDBC URL, username, and password of MySQL server
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/myselfapp";
-    private static final String JDBC_USER = "root";
-    private static final String JDBC_PASSWORD = "realmadrid4072";
 
-    // JDBC variables for managing the connection
-    private Connection connection;
+    User user;
 
-    public LoginSystem() {
-        try {
-            // Load the MySQL JDBC driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            // Establish the connection
-            connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
+    public LoginSystem(User user){
+        this.user=user;
+    }
+    public boolean checkAccount() {
+        String path = "C:\\SPL\\Data";
+        File folder = new File(path);
+
+        String userDirectoryPath = path + "\\" + user.getUsername();
+        File userDirectory = new File(userDirectoryPath);
+        if (userDirectory.exists() && userDirectory.isDirectory()) {
+            return true;
         }
+        System.out.println("User doesn't exist");
+        return false;
     }
 
-    // ...
-
-    public boolean login(String username, String password) {
+    public boolean checkPassword() {
+        String fileName = "C:\\SPL\\Data\\" + user.getUsername() + "\\Password.txt";
         try {
-            String query = "SELECT * FROM user WHERE username = ? AND password = ?";
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, username);
-            preparedStatement.setString(2, password);
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            String line = reader.readLine();
+            reader.close();
 
-            ResultSet resultSet = preparedStatement.executeQuery();
-            return resultSet.next(); // If a row is returned, login is successful
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return false; // Login failed
+            if (line != null && line.equals(user.getPassword())) {
+                return true;
+            } else {
+                System.out.println("Passwords do not match or password is not strong enough. Please try again.");
+                return false;
+            }
+        } catch (FileNotFoundException e) {
+            System.err.println("File not found: " + e.getMessage());
+        } catch (IOException e) {
+            System.err.println("An error occurred while reading the file: " + e.getMessage());
         }
+        return false;
+    }
+
+    public User login() {
+        return new User(user.getUsername(), user.getPassword());
     }
 }
