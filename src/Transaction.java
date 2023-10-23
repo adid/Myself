@@ -6,6 +6,10 @@ class Transaction
     public Transaction(String description, double amount)
     {
         this.description = description;
+        if (amount < 0)
+        {
+            throw new IllegalArgumentException("Transaction amount must be non-negative.");
+        }
         this.amount = amount;
     }
 
