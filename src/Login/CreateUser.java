@@ -29,7 +29,7 @@ public class CreateUser
         // Check if the password meets the criteria
         String password = user.getPassword();
         if (!isStrongPassword(password)) {
-            System.out.println("Password must contain at least one uppercase letter, one lowercase letter, and one digit.");
+            System.out.println("Password must be of atleast 6 characters and contain at least one uppercase letter, one lowercase letter, and one digit.");
             return false;
         }
 
@@ -37,8 +37,9 @@ public class CreateUser
     }
 
     public boolean isStrongPassword(String password) {
-        return password.matches(".*[A-Z].*") && password.matches(".*[a-z].*") && password.matches(".*\\d.*");
+        return password.matches(".*[A-Z].*") && password.matches(".*[a-z].*") && password.matches(".*\\d.*") && password.length() >= 6;
     }
+
 
     public void createUserFile(){
         String path = "C:\\SPL\\Data"+ user.getUsername();
