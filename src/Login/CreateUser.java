@@ -136,13 +136,13 @@ public class CreateUser
     }
 
     public void createAccount() throws IOException {
-        while (checkUser() && checkPassword()){
+//        while (checkUser() && checkPassword()){
         createUserFile();
         createPasswordFile();
         createInfoFile();
         createBalanceFile();
         createLoanFile();
         createTransactionFile();
-        }
+//        }
     }
 }

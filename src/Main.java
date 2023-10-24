@@ -38,9 +38,9 @@ public class Main {
                 System.out.print("Enter password: ");
                 String password = scanner1.nextLine();
 
-                User temp = new User(username, password);
+                User loginUser = new User(username, password);
 
-                LoginSystem loginSystem = new LoginSystem(temp);
+                LoginSystem loginSystem = new LoginSystem(loginUser);
 
                 if (loginSystem.checkAccount() && loginSystem.checkPassword()) {
                     loggedIn = true;
@@ -52,7 +52,7 @@ public class Main {
                     System.out.println("*  You can now manage your finances.   *");
                     System.out.println("******************************************");
 
-                    Finance_Management financeManager = new Finance_Management();
+                    Finance_Management financeManager = new Finance_Management(loginUser);
                     financeManager.run();
 
                     System.out.println("Logging out...");

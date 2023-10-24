@@ -1,11 +1,10 @@
 package Login;
 
-import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
-
+import java.io.IOException;
 
 public class Register {
     public void register() {
@@ -60,17 +59,48 @@ public class Register {
         String phoneNumber = scanner.nextLine();
         System.out.print("Email: ");
         String email = scanner.nextLine();
-        System.out.print("Sex: ");
-        String sex = scanner.nextLine();
-        System.out.print("Marital Status: ");
-        String maritalStatus = scanner.nextLine();
+
+        // Get user's sex
+        System.out.println("Sex:");
+        System.out.println("1. Male");
+        System.out.println("2. Female");
+        int sexChoice = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
+        String sex = (sexChoice == 1) ? "Male" : "Female";
+
+        // Get user's marital status
+        System.out.println("Marital Status:");
+        System.out.println("1. Married");
+        System.out.println("2. Unmarried");
+        int maritalStatusChoice = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
+        String maritalStatus = (maritalStatusChoice == 1) ? "Married" : "Unmarried";
+
         System.out.print("Nationality: ");
         String nationality = scanner.nextLine();
         System.out.print("Income: ");
         int income = scanner.nextInt();
         scanner.nextLine(); // Consume the newline character
-        System.out.print("Currency: ");
-        String currency = scanner.nextLine();
+
+        // Get user's preferred currency
+        System.out.println("Currency:");
+        System.out.println("1. BDT");
+        System.out.println("2. $");
+        System.out.println("3. Euro");
+        int currencyChoice = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
+        String currency = "";
+        switch (currencyChoice) {
+            case 1:
+                currency = "BDT";
+                break;
+            case 2:
+                currency = "$";
+                break;
+            case 3:
+                currency = "Euro";
+                break;
+        }
 
         // Create a user and user info
         User user = new User(username, password);
