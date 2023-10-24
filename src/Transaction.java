@@ -33,6 +33,10 @@ class Transaction
     {
         return transactionType;
     }
+    public void setTransactionType(String type)
+    {
+        this.transactionType=type;
+    }
 
     public LocalDateTime getDateTime()
     {

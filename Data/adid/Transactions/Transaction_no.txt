@@ -2,3 +2,6 @@ Transaction Type:   Date: 2023-10-25T02:43:31.534292900   Amount: 1200.0 Descrip
 Transaction Type:   Date: 2023-10-25T02:43:38.687043300   Amount: 1300.0 Description: B
 Transaction Type:   Date: 2023-10-25T02:43:44.992909200   Amount: 1400.0 Description: C
 Transaction Type:   Date: 2023-10-25T02:57:35.867179100   Amount: 2700.0 Description: E
+Transaction Type:   Date: 2023-10-25T03:51:45.489760   Amount: 231.0 Description: A
+Transaction Type: Income  Date: 2023-10-25T04:27:02.236813800   Amount: 1200.0 Description: A
+Transaction Type: Expense  Date: 2023-10-25T04:27:27.196920100   Amount: 1000.0 Description: asd
