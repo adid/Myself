@@ -3,92 +3,88 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
-public class Finance_Management
-{
+public class Finance_Management {
     private ArrayList<Transaction> transactions;
     private double balance;
     private Scanner scanner;
 
-    public Finance_Management()
-    {
+    public Finance_Management() {
         transactions = new ArrayList<>();
         balance = 0.0;
         scanner = new Scanner(System.in);
     }
 
-    public double addTransaction(String description, double amount)
-    {
-        Transaction transaction = new Transaction(description, amount);
+    public double addTransaction(Transaction transaction) {
         transactions.add(transaction);
-        balance += amount;
-        System.out.println("Transaction added: " + transaction);
+        balance += transaction.getAmount();
+        System.out.println("Transaction added: " + transaction.getTransaction_no() + " x " + transaction.getAmount() + " x " +
+                transaction.getTransactionType() + " x " + transaction.getDateTime() + " x " + transaction.getDescription());
         return balance;
     }
-    public double getTransactionCount() {
-            return transactions.size();
-    }
-    public void viewTransactions()
-    {
-        if (transactions.isEmpty())
-        {
-            System.out.println("No transactions found.");
-        }
 
-        else
-        {
+    public double getTransactionCount() {
+        return transactions.size();
+    }
+
+    public void viewTransactions() {
+        if (transactions.isEmpty()) {
+            System.out.println("No transactions found.");
+        } else {
             System.out.println("Transactions:");
             for (Transaction transaction : transactions) {
-                            System.out.println("Description: " + transaction.getDescription());
-                            System.out.println("Amount: " + transaction.getAmount());
-                            System.out.println();
+                System.out.println("Description: " + transaction.getDescription());
+                System.out.println("Amount: " + transaction.getAmount());
+                System.out.println();
             }
         }
 
         System.out.println("Current balance: " + balance);
     }
 
-     public void run()
-        {
-            boolean running = true;
-            while (running)
-            {
-                System.out.println("Manage your finance with Myself");
-                System.out.println("1. Add Transaction");
-                System.out.println("2. View Transactions");
-                System.out.println("3. Quit");
-                System.out.print("Enter your choice: ");
+    public void run() {
+        boolean running = true;
+        while (running) {
+            System.out.println("Manage your finance with Myself");
+            System.out.println("1. Add Transaction");
+            System.out.println("2. View Transactions");
+            System.out.println("3. Quit");
+            System.out.print("Enter your choice: ");
 
-                try {
-                    int choice = scanner.nextInt(); //gets int value
-                    scanner.nextLine(); // consume the newline character
-                    switch (choice)
-                    {
-                        case 1:
-                            System.out.print("Enter transaction description: ");
-                            String description = scanner.nextLine();
-                            System.out.print("Enter transaction amount: $");
-                            double amount = scanner.nextDouble();
-                            scanner.nextLine(); // consume the newline character
-                            addTransaction(description, amount);
-                            break;
-                        case 2:
-                            viewTransactions();
-                            break;
-                        case 3:
-                            running = false;
-                            break;
-                        default:
-                            System.out.println("Invalid choice. Please try again.");
-                    }
+            try {
+                int choice = scanner.nextInt(); //gets int value
+                scanner.nextLine(); // consume the newline character
+                switch (choice) {
+                    case 1:
+                        System.out.print("Enter transaction description: ");
+                        String description = scanner.nextLine();
+                        System.out.print("Enter transaction amount: ");
+                        double amount = scanner.nextDouble();
+                        System.out.print("Enter transaction no: ");
+                        int transaction_no = scanner.nextInt();
+                        System.out.print("Enter transaction type: ");
+                        String transactionType = scanner.nextLine();
+
+                        scanner.nextLine(); // consume the newline character
+                        Transaction newTransaction = new Transaction(description, amount, transaction_no, transactionType);
+                        addTransaction(newTransaction);
+                        break;
+
+                    case 2:
+                        viewTransactions();
+                        break;
+                    case 3:
+                        running = false;
+                        break;
+                    default:
+                        System.out.println("Invalid choice. Please try again.");
                 }
-                catch (InputMismatchException e)
-                {
-                    System.out.println("Invalid input! Please enter a valid number.");
-                    scanner.nextLine(); // consume the invalid input
-                }
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input! Please enter a valid information.");
+                scanner.nextLine(); // consume the invalid input
             }
-            System.out.println("Finance Manager closed.");
         }
+        System.out.println("Finance Manager closed.");
+    }
 
     public static void main(String[] args)
     {
