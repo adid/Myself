@@ -111,8 +111,11 @@ public class Register {
 
         // Attempt to create an account
         try {
-            createUser.createAccount();
-            System.out.println("Account created successfully.");
+            if(createUser.createAccount()) {
+                System.out.println("Account created successfully.");
+            } else {
+                System.out.println("Account creation failed.");
+            }
         } catch (IOException e) {
             System.err.println("Error creating account: " + e.getMessage());
         }

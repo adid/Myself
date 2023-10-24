@@ -20,7 +20,7 @@ public class CreateUser
     }
 
 
-    public void createUserFile(){
+    public void createUserFile()  {
         String path = "C:\\SPL\\Data\\"+ user.getUsername();
         File folder= new File(path);
         folder.mkdir();
@@ -135,14 +135,16 @@ public class CreateUser
         return true;
     }
 
-    public void createAccount() throws IOException {
-//        while (checkUser() && checkPassword()){
-        createUserFile();
-        createPasswordFile();
-        createInfoFile();
-        createBalanceFile();
-        createLoanFile();
-        createTransactionFile();
-//        }
+    public boolean createAccount() throws IOException {
+        if (checkUser() && checkPassword()){
+            createUserFile();
+            createPasswordFile();
+            createInfoFile();
+            createBalanceFile();
+            createLoanFile();
+            createTransactionFile();
+            return true;
+        }
+        return false;
     }
 }
