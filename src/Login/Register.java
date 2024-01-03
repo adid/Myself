@@ -1,10 +1,14 @@
 package Login;
 
+import java.lang.*;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
-import java.io.IOException;
+
+import Finance.Finance_Management;
+import MainMenu.MainMenu;
 
 public class Register {
     public void register() {
@@ -19,7 +23,7 @@ public class Register {
         boolean validPassword = false;
 
         while (!validPassword) {
-            System.out.print("Enter a password: ");
+            System.out.print("Enter a password (Password must be at least 6 characters and must include Uppercase, Lowercase and a Number): ");
             password = scanner.nextLine();
 
             System.out.print("Confirm password: ");
@@ -120,6 +124,8 @@ public class Register {
             System.err.println("Error creating account: " + e.getMessage());
         }
 
+        MainMenu menu = new MainMenu(user);
+        menu.run();
         scanner.close();
     }
 

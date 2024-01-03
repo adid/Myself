@@ -1,4 +1,6 @@
 package Login;
+
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class UserInfo {
@@ -14,9 +16,7 @@ public class UserInfo {
     private String sex;
     private String maritalStatus;
     private String nationality;
-
     private int income;
-
     private String currency;
 
     public UserInfo(String username, String firstName, String lastName, Date dateOfBirth, String placeOfBirth, String address,
@@ -61,8 +61,9 @@ public class UserInfo {
         this.lastName = lastName;
     }
 
-    public Date getDateOfBirth() {
-        return dateOfBirth;
+    public String getDateOfBirth() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        return dateFormat.format(dateOfBirth);
     }
 
     public void setDateOfBirth(Date dateOfBirth) {

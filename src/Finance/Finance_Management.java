@@ -1,8 +1,8 @@
-import Login.LoginSystem;
+package Finance;
+
 import Login.User;
 
 import java.io.*;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -63,7 +63,7 @@ public class Finance_Management {
     }
     public void addTransaction(Transaction transaction) throws IOException {
         transactions.add(transaction);
-        System.out.println("Transaction added: " + transaction.getAmount() + " x " + transaction.getDateTime() + " x " + transaction.getDescription());
+        System.out.println("Finance.Transaction added: " + transaction.getAmount() + " x " + transaction.getDateTime() + " x " + transaction.getDescription());
         addTransactionToFile(transaction);
     }
 
@@ -71,7 +71,7 @@ public class Finance_Management {
         String path = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Transactions\\Transaction_no.txt";
 
         FileWriter myWriter = new FileWriter(path,true);
-        String transactionWrite= "Transaction Type: "+ transaction.getTransactionType()+ "  Date: "+ transaction.getDateTime()+
+        String transactionWrite= "Finance.Transaction Type: "+ transaction.getTransactionType()+ "  Date: "+ transaction.getDateTime()+
                 "   Amount: "+transaction.getAmount()+" Description: "+ transaction.getDescription()+ "\n";
         myWriter.append(transactionWrite);
         myWriter.close();
@@ -105,7 +105,7 @@ public class Finance_Management {
     public double deductMoney(Transaction transaction) throws IOException {
         transaction.setTransactionType("Expense");
         if(balance<transaction.getAmount()) {
-            System.out.println("Transaction not Possible!");
+            System.out.println("Finance.Transaction not Possible!");
         }
         addTransaction(transaction);
         balance -= transaction.getAmount();
@@ -124,9 +124,9 @@ public class Finance_Management {
     }
 
     public double giveLoan(Transaction transaction) throws IOException {
-        transaction.setTransactionType("Expense");
+        transaction.setTransactionType("Lend");
         if(balance<transaction.getAmount()) {
-            System.out.println("Transaction not Possible!");
+            System.out.println("Finance.Transaction not Possible!");
         }
         addTransaction(transaction);
         loanBalance-=transaction.getAmount();
@@ -138,6 +138,9 @@ public class Finance_Management {
 
     public double getBalance(){
         return balance;
+    }
+    public double getLoanBalance(){
+        return loanBalance;
     }
 
     public double getTransactionCount() {
@@ -153,8 +156,7 @@ public class Finance_Management {
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String line;
-            while (br.readLine() != null) {
-                line = br.readLine();
+            while ((line = br.readLine()) != null) {
                 System.out.println(line);
             }
         } catch (IOException e) {
@@ -167,24 +169,24 @@ public class Finance_Management {
         boolean running = true;
         while (running) {
             System.out.println("Manage your finance with Myself");
-            System.out.println("0. View Balance");
-            System.out.println("1. Add Transaction");
+            System.out.println("1. View Balance");
             System.out.println("2. View Transactions");
             System.out.println("3. Add Income");
             System.out.println("4. Add Expense");
             System.out.println("5. Take Loan");
             System.out.println("6. Give Loan");
-            System.out.println("7. Quit");
+            System.out.println("7. View Loan Balance");
+            System.out.println("8. Quit");
             System.out.print("Enter your choice: ");
 
             try {
                 int choice = scanner.nextInt(); //gets int value
                 scanner.nextLine(); // consume the newline character
                 switch (choice) {
-                    case 0:
+                    case 1:
                         System.out.print(getBalance() + "\n");
                         break;
-                    case 1:
+                    case 9999:
                         System.out.print("Enter transaction description: ");
                         String description = scanner.nextLine();
                         System.out.print("Enter transaction amount: ");
@@ -249,6 +251,9 @@ public class Finance_Management {
                         giveLoan(newTransaction);
                         break;
                     case 7:
+                        System.out.print(getLoanBalance() + "\n");
+                        break;
+                    case 8:
                         running = false;
                         break;
                     default:

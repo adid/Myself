@@ -1,6 +1,9 @@
+import Finance.Finance_Management;
 import Login.LoginSystem;
 import Login.Register;
 import Login.User;
+import MainMenu.MainMenu;
+
 import java.util.Scanner;
 
 public class Main {
@@ -52,8 +55,8 @@ public class Main {
                     System.out.println("*  You can now manage your finances.   *");
                     System.out.println("******************************************");
 
-                    Finance_Management financeManager = new Finance_Management(loginUser);
-                    financeManager.run();
+                    MainMenu menu = new MainMenu(loginUser);
+                    menu.run();
 
                     System.out.println("Logging out...");
                 } else {

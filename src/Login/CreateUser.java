@@ -46,6 +46,8 @@ public class CreateUser
         writer.append("\n");
         writer.append(userInfo.getLastName());
         writer.append("\n");
+        writer.append(userInfo.getDateOfBirth());
+        writer.append("\n");
         writer.append(userInfo.getPlaceOfBirth());
         writer.append("\n");
         writer.append(userInfo.getAddress());

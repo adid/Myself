@@ -1,3 +1,5 @@
+package Finance;
+
 import java.time.LocalDateTime;
 
 class Transaction
@@ -12,7 +14,7 @@ class Transaction
         this.description = description;
         if (amount < 0)
         {
-            throw new IllegalArgumentException("Transaction amount must be non-negative.");
+            throw new IllegalArgumentException("Finance.Transaction amount must be non-negative.");
         }
         this.amount = amount;
         this.transactionType= transactionType;
