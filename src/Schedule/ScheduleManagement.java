@@ -4,6 +4,7 @@ import Finance.Finance_Management;
 import Login.User;
 import Login.UserInfoPrint;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class ScheduleManagement
@@ -13,7 +14,7 @@ public class ScheduleManagement
         this.user = user;
     }
 
-public void run() {
+public void run() throws IOException {
     Scanner scanner = new Scanner(System.in);
 
     while (true) {
@@ -27,11 +28,17 @@ public void run() {
         int input = scanner.nextInt();
 
         if (input == 1) {
-            //To be completed
+            ViewSchedule viewSchedule = new ViewSchedule(user);
+            viewSchedule.run();
         } else if (input == 2) {
             //To be completed
         } else if (input == 3) {
-            //To be completed
+            CreateSchedule createSchedule= new CreateSchedule(user);
+            try {
+                createSchedule.run();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         } else if (input == 4) {
             System.out.println("Exiting Myself App...");
             System.exit(0);

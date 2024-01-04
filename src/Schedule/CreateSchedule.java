@@ -5,9 +5,12 @@ import Login.User;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class CreateSchedule {
     private User user;
+    private ArrayList<String> schedule = new ArrayList<>();
 
     public CreateSchedule(User user) {
         this.user = user;
@@ -17,29 +20,112 @@ public class CreateSchedule {
         String path = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Schedule";
         File folder= new File(path);
         folder.mkdir();
+    }
 
-        String path0 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Schedule\\Saturday.txt";
-        String path1 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Schedule\\Sunday.txt";
-        String path2 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Schedule\\Monday.txt";
-        String path3 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Schedule\\Tuesday.txt";
-        String path4 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Schedule\\Wednesday.txt";
-        String path5 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Schedule\\Thursday.txt";
-        String path6 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Schedule\\Friday.txt";
+    public void writeToFile(String day) throws IOException {
+        String directoryPath = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Schedule\\";
+        String path = directoryPath + day + ".txt";
+        File dayFile = new File(path);
 
-        File saturday= new File(path0);
-        File sunday= new File(path1);
-        File monday= new File(path2);
-        File tuesday= new File(path3);
-        File wednesday= new File(path4);
-        File thursday= new File(path5);
-        File friday= new File(path6);
+        try (FileWriter writer = new FileWriter(dayFile)) {
+            writer.write(day);
+            for (String scd : schedule) {
+                writer.append("\n");
+                writer.append(scd);
+            }
+        }
+    }
 
-        FileWriter myWriter0 = new FileWriter(saturday);
-        FileWriter myWriter1 = new FileWriter(sunday);
-        FileWriter myWriter2 = new FileWriter(monday);
-        FileWriter myWriter3 = new FileWriter(tuesday);
-        FileWriter myWriter4 = new FileWriter(wednesday);
-        FileWriter myWriter5 = new FileWriter(thursday);
-        FileWriter myWriter6 = new FileWriter(friday);
+
+    public void dailySchedule(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("00.00-01.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("01.00-02.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("02.00-03.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("03.00-04.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("04.00-05.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("05.00-06.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("06.00-07.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("07.00-08.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("08.00-09.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("09.00-10.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("10.00-11.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("11.00-12.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("12.00-13.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("13.00-14.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("14.00-15.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("15.00-16.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("16.00-17.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("17.00-18.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("18.00-19.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("19.00-20.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("20.00-21.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("21.00-22.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("22.00-23.00: ");
+        schedule.add(scanner.nextLine());
+        System.out.print("23.00-24.00: ");
+        schedule.add(scanner.nextLine());
+    }
+
+    public void run() throws IOException {
+        createScheduleFile();
+
+        System.out.println("Saturday: ");
+        dailySchedule();
+        writeToFile("Saturday");
+        schedule.clear();
+
+        System.out.println("Sunday: ");
+        dailySchedule();
+        writeToFile("Sunday");
+        schedule.clear();
+
+        System.out.println("Monday: ");
+        dailySchedule();
+        writeToFile("Monday");
+        schedule.clear();
+
+        System.out.println("Tuesday: ");
+        dailySchedule();
+        writeToFile("Tuesday");
+        schedule.clear();
+
+        System.out.println("Wednesday: ");
+        dailySchedule();
+        writeToFile("Wednesday");
+        schedule.clear();
+
+        System.out.println("Thursday: ");
+        dailySchedule();
+        writeToFile("Thursday");
+        schedule.clear();
+
+        System.out.println("Friday: ");
+        dailySchedule();
+        writeToFile("Friday");
+        schedule.clear();
     }
 }
