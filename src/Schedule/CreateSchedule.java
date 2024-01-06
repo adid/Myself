@@ -22,7 +22,7 @@ public class CreateSchedule {
         folder.mkdir();
     }
 
-    public void writeToFile(String day) throws IOException {
+    public void writeToFile(ArrayList<String> schedule ,String day) throws IOException {
         String directoryPath = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Schedule\\";
         String path = directoryPath + day + ".txt";
         File dayFile = new File(path);
@@ -95,37 +95,37 @@ public class CreateSchedule {
 
         System.out.println("Saturday: ");
         dailySchedule();
-        writeToFile("Saturday");
+        writeToFile(schedule,"Saturday");
         schedule.clear();
 
         System.out.println("Sunday: ");
         dailySchedule();
-        writeToFile("Sunday");
+        writeToFile(schedule,"Sunday");
         schedule.clear();
 
         System.out.println("Monday: ");
         dailySchedule();
-        writeToFile("Monday");
+        writeToFile(schedule,"Monday");
         schedule.clear();
 
         System.out.println("Tuesday: ");
         dailySchedule();
-        writeToFile("Tuesday");
+        writeToFile(schedule,"Tuesday");
         schedule.clear();
 
         System.out.println("Wednesday: ");
         dailySchedule();
-        writeToFile("Wednesday");
+        writeToFile(schedule,"Wednesday");
         schedule.clear();
 
         System.out.println("Thursday: ");
         dailySchedule();
-        writeToFile("Thursday");
+        writeToFile(schedule,"Thursday");
         schedule.clear();
 
         System.out.println("Friday: ");
         dailySchedule();
-        writeToFile("Friday");
+        writeToFile(schedule,"Friday");
         schedule.clear();
     }
 }
