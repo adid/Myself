@@ -1,119 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef0f3806-2aaa-4e52-9b87-8fb8a73bb87b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaa/Password.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/aaa/Password.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaa/UserInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/aaa/UserInfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaa/Current_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaa/Loan_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaa/Password.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaa/Transactions/Amount.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaa/Transactions/Date.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaa/Transactions/Description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaa/Transactions/Transaction_Type.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaa/Transactions/Transaction_no.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaa/UserInfo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaaa/Current_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaaa/Loan_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaaa/Password.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaaa/Transactions/Amount.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaaa/Transactions/Date.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaaa/Transactions/Description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaaa/Transactions/Transaction_Type.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaaa/Transactions/Transaction_no.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaaaa/UserInfo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/addsas/Current_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/addsas/Loan_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/addsas/Password.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/addsas/Transactions/Amount.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/addsas/Transactions/Date.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/addsas/Transactions/Description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/addsas/Transactions/Transaction_Type.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/addsas/Transactions/Transaction_no.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/addsas/UserInfo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adid/Current_Balance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/adid/Current_Balance.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adid/Password.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/adid/Password.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adid/Transactions/Transaction_no.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/adid/Transactions/Transaction_no.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adid/UserInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/adid/UserInfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adidd/Current_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adidd/Loan_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adidd/Password.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adidd/Transactions/Amount.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adidd/Transactions/Date.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adidd/Transactions/Description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adidd/Transactions/Transaction_Type.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adidd/Transactions/Transaction_no.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adidd/UserInfo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/alvee/Current_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/alvee/Loan_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/alvee/Password.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/alvee/Transactions/Amount.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/alvee/Transactions/Date.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/alvee/Transactions/Description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/alvee/Transactions/Transaction_Type.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/alvee/Transactions/Transaction_no.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/alvee/UserInfo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ami/Current_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ami/Loan_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ami/Password.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ami/Transactions/Amount.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ami/Transactions/Date.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ami/Transactions/Description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ami/Transactions/Transaction_Type.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ami/Transactions/Transaction_no.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ami/UserInfo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/dipto/Current_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/dipto/Loan_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/dipto/Password.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/dipto/Transactions/Amount.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/dipto/Transactions/Date.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/dipto/Transactions/Description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/dipto/Transactions/Transaction_Type.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/dipto/Transactions/Transaction_no.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/dipto/UserInfo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/mehedi/Current_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/mehedi/Loan_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/mehedi/Password.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/mehedi/Transactions/Amount.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/mehedi/Transactions/Date.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/mehedi/Transactions/Description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/mehedi/Transactions/Transaction_Type.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/mehedi/Transactions/Transaction_no.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/mehedi/UserInfo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/nirjhar/Password.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/nirjhar/Password.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/nirjhar/UserInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/nirjhar/UserInfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/okeeee/Current_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/okeeee/Loan_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/okeeee/Password.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/okeeee/Transactions/Amount.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/okeeee/Transactions/Date.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/okeeee/Transactions/Description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/okeeee/Transactions/Transaction_Type.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/okeeee/Transactions/Transaction_no.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/okeeee/UserInfo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ovi/Current_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ovi/Loan_Balance.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ovi/Password.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ovi/Transactions/Amount.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ovi/Transactions/Date.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ovi/Transactions/Description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ovi/Transactions/Transaction_Type.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ovi/Transactions/Transaction_no.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ovi/UserInfo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Finance_Management.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Finance/Finance_Management.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Finance_ManagementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Finance_ManagementTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/ramisa/Password.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/Password.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/ramisa/UserInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/UserInfo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Login/CreateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/CreateUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Login/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/UserInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Finance/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TransactionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TransactionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainMenu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Schedule/ViewSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Schedule/ViewSchedule.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +44,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -177,6 +83,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Important_Days" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Finance_Management" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Finance.Finance_Management" />
@@ -187,6 +98,13 @@
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="MySelfApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PasswordInputExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PasswordInputExample" />
       <module name="MySelfApp" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -208,6 +126,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.PasswordInputExample" />
         <item itemvalue="Application.Finance_Management" />
       </list>
     </recent_temporary>
@@ -245,6 +164,8 @@
       <workItem from="1704303176872" duration="11171000" />
       <workItem from="1704478355235" duration="3050000" />
       <workItem from="1704526807128" duration="3487000" />
+      <workItem from="1704558623276" duration="2062000" />
+      <workItem from="1704565328448" duration="6518000" />
     </task>
     <servers />
   </component>

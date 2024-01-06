@@ -1,6 +1,7 @@
 package MainMenu;
 
 import Finance.Finance_Management;
+import Important_Days.ImportantDays;
 import Login.*;
 import Schedule.ScheduleManagement;
 
@@ -49,7 +50,8 @@ public class MainMenu
                 scheduleManagement.run();
             }
             else if (input == 4) {
-                //To be completed
+                ImportantDays importantDays = new ImportantDays(user);
+                importantDays.run();
             }
             else if (input == 5) {
                 System.out.println("Exiting Myself App...");

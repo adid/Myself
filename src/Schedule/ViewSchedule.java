@@ -3,6 +3,7 @@ package Schedule;
 import Login.User;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -40,6 +41,16 @@ public class ViewSchedule
     }
 
     public void run(){
+
+        String directoryPath = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Schedule\\";
+        File directory = new File(directoryPath);
+
+        if (!directory.exists() || !directory.isDirectory())
+        {
+            System.out.println("Schedule not Available. Please Create one");
+            return;
+        }
+
         loadFileToArray(saturday, "Saturday");
         loadFileToArray(sunday, "Sunday");
         loadFileToArray(monday, "Monday");
@@ -47,6 +58,12 @@ public class ViewSchedule
         loadFileToArray(wednesday, "Wednesday");
         loadFileToArray(thursday, "Thursday");
         loadFileToArray(friday, "Friday");
+
+        if(saturday.isEmpty() || sunday.isEmpty() || monday.isEmpty() || tuesday.isEmpty() || wednesday.isEmpty() || thursday.isEmpty() || friday.isEmpty())
+        {
+            System.out.println("Schedule not Available. Please Create one");
+            return;
+        }
 
         System.out.printf("%-15s %-15s %-15s %-15s %-15s %-15s %-15s %-15s\n", "Day" ,saturday.get(0),sunday.get(0),monday.get(0),tuesday.get(0),wednesday.get(0),thursday.get(0),friday.get(0));
 

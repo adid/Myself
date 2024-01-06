@@ -1,4 +1,5 @@
 package Login;
+import java.io.Console;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -92,6 +93,20 @@ public class CreateUser
         myWriter.close();
     }
 
+    public void createImportantDaysFile() throws IOException {
+        String path = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Important Days";
+        File folder= new File(path);
+        folder.mkdir();
+        String dates = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Important Days\\dates.txt";
+        String topics = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Important Days\\topics.txt";
+
+        File datefile= new File(dates);
+        File topicfile= new File(topics);
+
+        FileWriter myWriter0 = new FileWriter(datefile);
+        FileWriter myWriter1 = new FileWriter(topicfile);
+    }
+
     public void createTransactionFile() throws IOException {
         String path = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Transactions";
         File folder= new File(path);
@@ -146,6 +161,7 @@ public class CreateUser
             createBalanceFile();
             createLoanFile();
             createTransactionFile();
+            createImportantDaysFile();
             return true;
         }
         return false;

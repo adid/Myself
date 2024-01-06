@@ -1,13 +1,44 @@
-import Finance.Finance_Management;
 import Login.LoginSystem;
 import Login.Register;
 import Login.User;
 import MainMenu.MainMenu;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.util.Scanner;
 
+
+
 public class Main {
+
+    void getPassword()
+    {
+        SwingUtilities.invokeLater(() -> {
+            JFrame frame = new JFrame("Password Input");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+            JPasswordField passwordField = new JPasswordField();
+            passwordField.setEchoChar('*');
+
+            int option = JOptionPane.showConfirmDialog(
+                    frame,
+                    passwordField,
+                    "Enter Password",
+                    JOptionPane.OK_CANCEL_OPTION,
+                    JOptionPane.PLAIN_MESSAGE);
+
+            if (option == JOptionPane.OK_OPTION) {
+                char[] passwordChars = passwordField.getPassword();
+                String password = new String(passwordChars);
+                System.out.println("Password entered: " + password);
+                // Clear the password from memory for security reasons
+                java.util.Arrays.fill(passwordChars, ' ');
+            }
+
+            frame.dispose();
+        });
+    }
+
     public static void main(String[] args) throws IOException {
         // Create a styled welcome header
         System.out.println("******************************************");
@@ -18,6 +49,8 @@ public class Main {
         boolean loggedIn = false;
 
         Scanner scanner = new Scanner(System.in);
+
+
 
         while (!loggedIn) {
             System.out.println("Use the commands to continue:");

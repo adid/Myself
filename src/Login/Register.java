@@ -29,9 +29,12 @@ public class Register {
             System.out.print("Confirm password: ");
             confirmPassword = scanner.nextLine();
 
-            if (password.equals(confirmPassword) && isStrongPassword(password)) {
+            if (password.equals(confirmPassword) && isStrongPassword(password))
+            {
                 validPassword = true;
-            } else {
+            }
+            else
+            {
                 System.out.println("Passwords do not match or password is not strong enough. Please try again.");
             }
         }
