@@ -16,6 +16,7 @@ public class CreateUser
     }
 
     public boolean isStrongPassword(String password) {
+
         return password.matches(".*[A-Z].*") && password.matches(".*[a-z].*") && password.matches(".*\\d.*") && password.length() >= 6;
     }
 
@@ -138,7 +139,7 @@ public class CreateUser
     }
 
     public boolean createAccount() throws IOException {
-        if (checkUser() && checkPassword()){
+        if (checkUser() ){
             createUserFile();
             createPasswordFile();
             createInfoFile();
