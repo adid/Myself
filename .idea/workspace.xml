@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef0f3806-2aaa-4e52-9b87-8fb8a73bb87b" name="Changes" comment="">
+
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/ramisa/Password.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/Password.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/ramisa/UserInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/UserInfo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login/CreateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/CreateUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainMenu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Schedule/ViewSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Schedule/ViewSchedule.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
@@ -30,6 +45,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -59,13 +77,21 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Important_Days" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Finance_Management" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Finance_Management" />
+      <option name="MAIN_CLASS_NAME" value="Finance.Finance_Management" />
       <module name="MySelfApp" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -73,6 +99,13 @@
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="MySelfApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PasswordInputExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PasswordInputExample" />
       <module name="MySelfApp" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -94,6 +127,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.PasswordInputExample" />
         <item itemvalue="Application.Finance_Management" />
       </list>
     </recent_temporary>
@@ -123,6 +157,7 @@
       <workItem from="1698183620335" duration="153000" />
       <workItem from="1698184264085" duration="2590000" />
       <workItem from="1698186890473" duration="7000" />
+<<<<<<< HEAD
       <workItem from="1704265159727" duration="901000" />
       <workItem from="1704308545565" duration="243000" />
       <workItem from="1704308806831" duration="694000" />
@@ -132,6 +167,18 @@
       <workItem from="1704353845844" duration="4334000" />
       <workItem from="1704365926391" duration="833000" />
       <workItem from="1704367239809" duration="1274000" />
+=======
+      <workItem from="1698189872212" duration="925000" />
+      <workItem from="1698222812291" duration="4008000" />
+      <workItem from="1704223854715" duration="5854000" />
+      <workItem from="1704281548040" duration="3000" />
+      <workItem from="1704281607424" duration="2898000" />
+      <workItem from="1704303176872" duration="11171000" />
+      <workItem from="1704478355235" duration="3050000" />
+      <workItem from="1704526807128" duration="3487000" />
+      <workItem from="1704558623276" duration="2062000" />
+      <workItem from="1704565328448" duration="6518000" />
+>>>>>>> d00f092c94abc104459e0106dacae25540b9a279
     </task>
     <servers />
   </component>

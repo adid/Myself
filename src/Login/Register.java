@@ -10,19 +10,9 @@ import java.util.Scanner;
 import Finance.Finance_Management;
 import MainMenu.MainMenu;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Scanner;
-import java.io.IOException;
-
 public class Register {
-    public void register() {
+    public void register() throws IOException {
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("******************************************");
-        System.out.println("*           User Registration            *");
-        System.out.println("******************************************");
 
         // Get user input for username and password
         System.out.print("Enter a username: ");
@@ -33,23 +23,24 @@ public class Register {
         boolean validPassword = false;
 
         while (!validPassword) {
-            System.out.println("\nEnter a password:");
-            System.out.println("Password must be at least 6 characters and include Uppercase, Lowercase, and a Number.");
-            System.out.print("Password: ");
+            System.out.print("Enter a password (Password must be at least 6 characters and must include Uppercase, Lowercase and a Number): ");
             password = scanner.nextLine();
 
             System.out.print("Confirm password: ");
             confirmPassword = scanner.nextLine();
 
-            if (password.equals(confirmPassword) && isStrongPassword(password)) {
+            if (password.equals(confirmPassword) && isStrongPassword(password))
+            {
                 validPassword = true;
-            } else {
-                System.out.println("Passwords do not match or the password is not strong enough. Please try again.");
+            }
+            else
+            {
+                System.out.println("Passwords do not match or password is not strong enough. Please try again.");
             }
         }
 
         // Get user information
-        System.out.println("\nEnter personal information:");
+        System.out.println("Enter user information:");
 
         System.out.print("First Name: ");
         String firstName = scanner.nextLine();
@@ -77,7 +68,7 @@ public class Register {
         String email = scanner.nextLine();
 
         // Get user's sex
-        System.out.println("\nSelect your gender:");
+        System.out.println("Sex:");
         System.out.println("1. Male");
         System.out.println("2. Female");
         int sexChoice = scanner.nextInt();
@@ -85,7 +76,7 @@ public class Register {
         String sex = (sexChoice == 1) ? "Male" : "Female";
 
         // Get user's marital status
-        System.out.println("\nSelect your marital status:");
+        System.out.println("Marital Status:");
         System.out.println("1. Married");
         System.out.println("2. Unmarried");
         int maritalStatusChoice = scanner.nextInt();
@@ -99,7 +90,7 @@ public class Register {
         scanner.nextLine(); // Consume the newline character
 
         // Get user's preferred currency
-        System.out.println("\nSelect your preferred currency:");
+        System.out.println("Currency:");
         System.out.println("1. BDT");
         System.out.println("2. $");
         System.out.println("3. Euro");
@@ -128,9 +119,9 @@ public class Register {
         // Attempt to create an account
         try {
             if(createUser.createAccount()) {
-                System.out.println("\nAccount created successfully.");
+                System.out.println("Account created successfully.");
             } else {
-                System.out.println("\nAccount creation failed.");
+                System.out.println("Account creation failed.");
             }
         } catch (IOException e) {
             System.err.println("Error creating account: " + e.getMessage());

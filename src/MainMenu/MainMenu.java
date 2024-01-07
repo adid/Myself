@@ -1,22 +1,25 @@
 package MainMenu;
 
 import Finance.Finance_Management;
+import Important_Days.ImportantDays;
 import Login.*;
 import Schedule.ScheduleManagement;
 
+import java.io.IOException;
 import java.util.Scanner;
 
-
-public class MainMenu {
+public class MainMenu
+{
     private User user;
 
     public MainMenu(User user) {
         this.user = user;
     }
 
-    public void run() {
+
+    public void run() throws IOException {
         System.out.println("******************************************");
-        System.out.println("Welcome, " + user.getUsername() + "!");
+        System.out.println("Welcome " + user.getUsername() + "!");
         System.out.println("******************************************");
 
         boolean loggedIn = true;
@@ -24,7 +27,7 @@ public class MainMenu {
         Scanner scanner = new Scanner(System.in);
 
         while (loggedIn) {
-            System.out.println("\nUse the commands to continue:");
+            System.out.println("Use the commands to continue:");
             System.out.println("1. View Account Info");
             System.out.println("2. Manage your Finances");
             System.out.println("3. Schedule Manager");
@@ -32,15 +35,7 @@ public class MainMenu {
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
 
-            int input;
-
-            try {
-                input = scanner.nextInt();
-            } catch (java.util.InputMismatchException e) {
-                System.out.println("Invalid input. Please enter a number.");
-                scanner.nextLine(); // Consume the invalid input
-                continue;
-            }
+            int input = scanner.nextInt();
 
             switch (input) {
                 case 1:
@@ -63,8 +58,8 @@ public class MainMenu {
                     System.exit(0);
                 default:
                     System.out.println("Invalid input. Please try again.");
-            }
+
         }
     }
 }
-
+}
