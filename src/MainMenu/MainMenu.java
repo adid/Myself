@@ -2,6 +2,7 @@ package MainMenu;
 
 import Finance.Finance_Management;
 import Login.*;
+import Schedule.ScheduleManagement;
 
 import java.util.Scanner;
 
@@ -26,8 +27,8 @@ public class MainMenu {
             System.out.println("\nUse the commands to continue:");
             System.out.println("1. View Account Info");
             System.out.println("2. Manage your Finances");
-            System.out.println("3. Schedule Manager (Coming Soon)");
-            System.out.println("4. Track Important Dates (Coming Soon)");
+            System.out.println("3. Schedule Manager");
+            System.out.println("4. Track Important Dates");
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
 
@@ -51,7 +52,8 @@ public class MainMenu {
                     financeManagement.run();
                     break;
                 case 3:
-                    System.out.println("Schedule Manager is coming soon!");
+                    ScheduleManagement scheduleManagement = new ScheduleManagement(user);
+                    //scheduleManagement.run();
                     break;
                 case 4:
                     System.out.println("Tracking Important Dates is coming soon!");
