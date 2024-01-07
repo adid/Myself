@@ -7,6 +7,7 @@ import Schedule.EditSchedule;
 import Schedule.ViewSchedule;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.Scanner;
 
 public class ImportantDays
@@ -16,14 +17,14 @@ public class ImportantDays
         this.user = user;
     }
 
-    public void run() throws IOException {
+    public void run() throws IOException, ParseException {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
             System.out.println("Use the commands to continue:");
             System.out.println("1. View All Important days");
             System.out.println("2. Add an Important day");
-            System.out.println("3. Remove an Important day");
+
             System.out.println("-----------------------------");
             System.out.println("4. Back to Main Menu");
             System.out.println("5. Exit");
@@ -33,17 +34,15 @@ public class ImportantDays
 
             if (input == 1)
             {
-                //To be completed
+                ViewImportantDays viewImportantDays = new ViewImportantDays(user);
+                viewImportantDays.run();
             }
             else if (input == 2)
             {
                 AddImportantDay addImportantDay = new AddImportantDay(user);
                 addImportantDay.run();
             }
-            else if (input == 3)
-            {
-                //To be completed
-            }
+
             else if (input == 4)
             {
                 MainMenu mainMenu = new MainMenu(user);

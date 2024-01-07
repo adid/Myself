@@ -8,16 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef0f3806-2aaa-4e52-9b87-8fb8a73bb87b" name="Changes" comment="">
-
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ramisa/Password.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/Password.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ramisa/UserInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/UserInfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/CreateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/CreateUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Important_Days/ImportantDays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Important_Days/ImportantDays.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainMenu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Schedule/ViewSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Schedule/ViewSchedule.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +150,6 @@
       <workItem from="1698183620335" duration="153000" />
       <workItem from="1698184264085" duration="2590000" />
       <workItem from="1698186890473" duration="7000" />
-<<<<<<< HEAD
       <workItem from="1704265159727" duration="901000" />
       <workItem from="1704308545565" duration="243000" />
       <workItem from="1704308806831" duration="694000" />
@@ -167,7 +159,6 @@
       <workItem from="1704353845844" duration="4334000" />
       <workItem from="1704365926391" duration="833000" />
       <workItem from="1704367239809" duration="1274000" />
-=======
       <workItem from="1698189872212" duration="925000" />
       <workItem from="1698222812291" duration="4008000" />
       <workItem from="1704223854715" duration="5854000" />
@@ -178,7 +169,7 @@
       <workItem from="1704526807128" duration="3487000" />
       <workItem from="1704558623276" duration="2062000" />
       <workItem from="1704565328448" duration="6518000" />
->>>>>>> d00f092c94abc104459e0106dacae25540b9a279
+      <workItem from="1704639970309" duration="398000" />
     </task>
     <servers />
   </component>
