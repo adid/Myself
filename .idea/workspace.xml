@@ -7,45 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef0f3806-2aaa-4e52-9b87-8fb8a73bb87b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/aaa/UserInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/aaa/UserInfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adid/Schedule/Friday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/adid/Schedule/Friday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adid/Schedule/Monday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/adid/Schedule/Monday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adid/Schedule/Saturday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/adid/Schedule/Saturday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adid/Schedule/Sunday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/adid/Schedule/Sunday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adid/Schedule/Thursday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/adid/Schedule/Thursday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adid/Schedule/Tuesday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/adid/Schedule/Tuesday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adid/Schedule/Wednesday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/adid/Schedule/Wednesday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adid/Transactions/Transaction_no.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/adid/Transactions/Transaction_no.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/adid/UserInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/adid/UserInfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/nirjhar/Schedule/Friday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/nirjhar/Schedule/Friday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/nirjhar/Schedule/Saturday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/nirjhar/Schedule/Saturday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/nirjhar/Schedule/Thursday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/nirjhar/Schedule/Thursday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/nirjhar/Schedule/Tuesday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/nirjhar/Schedule/Tuesday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/nirjhar/Schedule/Wednesday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/nirjhar/Schedule/Wednesday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/nirjhar/UserInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/nirjhar/UserInfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ramisa/Current_Balance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/Current_Balance.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ramisa/Important Days/dates.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/Important Days/dates.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ramisa/Important Days/topics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/Important Days/topics.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ramisa/Schedule/Friday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/Schedule/Friday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ramisa/Schedule/Monday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/Schedule/Monday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ramisa/Schedule/Saturday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/Schedule/Saturday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ramisa/Schedule/Sunday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/Schedule/Sunday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ramisa/Schedule/Thursday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/Schedule/Thursday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ramisa/Schedule/Tuesday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/Schedule/Tuesday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ramisa/Schedule/Wednesday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/Schedule/Wednesday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ramisa/Transactions/Transaction_no.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/Transactions/Transaction_no.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ramisa/UserInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ramisa/UserInfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Finance/Finance_Management.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Finance/Finance_Management.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Finance_ManagementTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainMenu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Schedule/EditSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Schedule/EditSchedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Schedule/ScheduleManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Schedule/ScheduleManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TransactionTest.java" beforeDir="false" />
-    </list>
+    <list default="true" id="ef0f3806-2aaa-4e52-9b87-8fb8a73bb87b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
