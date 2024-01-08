@@ -1,0 +1,8 @@
+Transaction Type: Income; Date: 2024-01-08 01:12:00; Amount: 20000.0; Description: 20000
+Transaction Type: Expense; Date: 2024-01-08 01:15:21; Amount: 4000.0; Description: Rent
+Transaction Type: Borrow; Date: 2024-01-08 01:15:56; Amount: 10000.0; Description: Mom gave to keep
+Transaction Type: Lend; Date: 2024-01-08 01:16:32; Amount: 15000.0; Description: Nirjhar asked for Loan
+Transaction Type: Income; Date: 2024-01-08 11:16:13; Amount: 20000.0; Description: Salary
+Transaction Type: Expense; Date: 2024-01-08 11:16:38; Amount: 10000.0; Description: Gaming set
+Transaction Type: Lend; Date: 2024-01-08 11:17:15; Amount: 5000.0; Description: Loan to Friend
+Transaction Type: Income; Date: 2024-01-08 11:27:50; Amount: 5000.0; Description: Gift

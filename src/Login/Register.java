@@ -1,5 +1,6 @@
 package Login;
 
+import java.io.File;
 import java.lang.*;
 import java.io.IOException;
 import java.text.ParseException;
@@ -11,12 +12,28 @@ import Finance.Finance_Management;
 import MainMenu.MainMenu;
 
 public class Register {
-    public void register() throws IOException {
+
+    public void checkUser(String username) throws IOException, ParseException {
+        String path = "C:\\SPL\\Data";
+
+        // Check if the username already exists
+        String userDirectoryPath = path + "\\" + username;
+        File userDirectory = new File(userDirectoryPath);
+        if (userDirectory.exists() && userDirectory.isDirectory()) {
+            System.out.println("Username already exists. Please choose a different username.");
+            register();
+            return;
+        }
+        return;
+    }
+    public void register() throws IOException, ParseException {
         Scanner scanner = new Scanner(System.in);
 
         // Get user input for username and password
         System.out.print("Enter a username: ");
         String username = scanner.nextLine();
+
+        checkUser(username);
 
         String password = null;
         String confirmPassword;

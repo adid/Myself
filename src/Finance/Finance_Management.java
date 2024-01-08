@@ -1,8 +1,12 @@
 package Finance;
 
 import Login.User;
+import MainMenu.MainMenu;
 
 import java.io.*;
+import java.text.ParseException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -63,16 +67,25 @@ public class Finance_Management {
     }
     public void addTransaction(Transaction transaction) throws IOException {
         transactions.add(transaction);
-        System.out.println("Finance.Transaction added: " + transaction.getAmount() + " x " + transaction.getDateTime() + " x " + transaction.getDescription());
+
+        LocalDateTime transactionDateTime = transaction.getDateTime();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String formattedDateTime = transactionDateTime.format(formatter);
+
+        System.out.println(transaction.getTransactionType() +" added: \nAmount:" + transaction.getAmount() + "; Date and Time: " + formattedDateTime + "; Description: " + transaction.getDescription());
         addTransactionToFile(transaction);
     }
 
     public void addTransactionToFile(Transaction transaction) throws IOException {
         String path = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Transactions\\Transaction_no.txt";
 
+        LocalDateTime transactionDateTime = transaction.getDateTime();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String formattedDateTime = transactionDateTime.format(formatter);
+
         FileWriter myWriter = new FileWriter(path,true);
-        String transactionWrite= "Finance.Transaction Type: "+ transaction.getTransactionType()+ "  Date: "+ transaction.getDateTime()+
-                "   Amount: "+transaction.getAmount()+" Description: "+ transaction.getDescription()+ "\n";
+        String transactionWrite= "Transaction Type: "+ transaction.getTransactionType()+ "; Date: "+ formattedDateTime+
+                "; Amount: "+transaction.getAmount()+"; Description: "+ transaction.getDescription()+ "\n";
         myWriter.append(transactionWrite);
         myWriter.close();
     }
@@ -162,7 +175,6 @@ public class Finance_Management {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     public void run() {
@@ -176,7 +188,9 @@ public class Finance_Management {
             System.out.println("5. Take Loan");
             System.out.println("6. Give Loan");
             System.out.println("7. View Loan Balance");
-            System.out.println("8. Quit");
+            System.out.println("-------------------------------");
+            System.out.println("9. Back to Main Menu");
+            System.out.println("10. Quit");
             System.out.print("Enter your choice: ");
 
             try {
@@ -207,11 +221,9 @@ public class Finance_Management {
                         description = scanner.nextLine();
                         System.out.print("Enter transaction amount: ");
                         amount = scanner.nextDouble();
-                        System.out.print("Enter transaction type: ");
-                        transactionType = scanner.nextLine();
 
                         scanner.nextLine(); // consume the newline character
-                        newTransaction = new Transaction(description, amount, transactionType);
+                        newTransaction = new Transaction(description, amount, "Income");
                         addMoney(newTransaction);
                         break;
                     case 4:
@@ -219,11 +231,9 @@ public class Finance_Management {
                         description = scanner.nextLine();
                         System.out.print("Enter transaction amount: ");
                         amount = scanner.nextDouble();
-                        System.out.print("Enter transaction type: ");
-                        transactionType = scanner.nextLine();
 
                         scanner.nextLine(); // consume the newline character
-                        newTransaction = new Transaction(description, amount, transactionType);
+                        newTransaction = new Transaction(description, amount, "Expense");
                         deductMoney(newTransaction);
                         break;
                     case 5:
@@ -231,11 +241,9 @@ public class Finance_Management {
                         description = scanner.nextLine();
                         System.out.print("Enter transaction amount: ");
                         amount = scanner.nextDouble();
-                        System.out.print("Enter transaction type: ");
-                        transactionType = scanner.nextLine();
 
                         scanner.nextLine(); // consume the newline character
-                        newTransaction = new Transaction(description, amount, transactionType);
+                        newTransaction = new Transaction(description, amount, "Borrow");
                         getLoan(newTransaction);
                         break;
                     case 6:
@@ -243,19 +251,23 @@ public class Finance_Management {
                         description = scanner.nextLine();
                         System.out.print("Enter transaction amount: ");
                         amount = scanner.nextDouble();
-                        System.out.print("Enter transaction type: ");
-                        transactionType = scanner.nextLine();
 
                         scanner.nextLine(); // consume the newline character
-                        newTransaction = new Transaction(description, amount, transactionType);
+                        newTransaction = new Transaction(description, amount, "Lend");
                         giveLoan(newTransaction);
                         break;
                     case 7:
                         System.out.print(getLoanBalance() + "\n");
                         break;
-                    case 8:
+
+                    case 9:
+                        MainMenu mainMenu = new MainMenu(user);
+                        mainMenu.run();
+
+                    case 10:
                         running = false;
                         break;
+
                     default:
                         System.out.println("Invalid choice. Please try again.");
                 }
@@ -263,6 +275,8 @@ public class Finance_Management {
                 System.out.println("Invalid input! Please enter a valid information.");
                 scanner.nextLine(); // consume the invalid input
             } catch (IOException e) {
+                throw new RuntimeException(e);
+            } catch (ParseException e) {
                 throw new RuntimeException(e);
             }
         }

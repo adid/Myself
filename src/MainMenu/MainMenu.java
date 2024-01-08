@@ -2,10 +2,12 @@ package MainMenu;
 
 import Finance.Finance_Management;
 import Important_Days.ImportantDays;
+import Important_Days.ShowToday;
 import Login.*;
 import Schedule.ScheduleManagement;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.Scanner;
 
 public class MainMenu
@@ -17,9 +19,12 @@ public class MainMenu
     }
 
 
-    public void run() throws IOException {
+    public void run() throws IOException, ParseException {
         System.out.println("******************************************");
         System.out.println("Welcome " + user.getUsername() + "!");
+        System.out.println("******************************************");
+        ShowToday showToday = new ShowToday(user);
+        showToday.run();
         System.out.println("******************************************");
 
         boolean loggedIn = true;
@@ -48,10 +53,11 @@ public class MainMenu
                     break;
                 case 3:
                     ScheduleManagement scheduleManagement = new ScheduleManagement(user);
-                    //scheduleManagement.run();
+                    scheduleManagement.run();
                     break;
                 case 4:
-                    System.out.println("Tracking Important Dates is coming soon!");
+                    ImportantDays importantDays = new ImportantDays(user);
+                    importantDays.run();
                     break;
                 case 5:
                     System.out.println("Exiting Myself App...");

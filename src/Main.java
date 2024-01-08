@@ -4,14 +4,15 @@ import Login.Register;
 import Login.User;
 import MainMenu.MainMenu;
 
+import java.io.IOException;
+import java.text.ParseException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, ParseException {
         // Create a styled welcome header
         System.out.println("******************************************");
-        System.out.println("*      Welcome to Myself Finance App!     *");
-        System.out.println("*                                        *");
+        System.out.println("*      Welcome to Myself App!            *");
         System.out.println("******************************************");
 
         boolean loggedIn = false;

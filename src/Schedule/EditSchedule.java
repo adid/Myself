@@ -5,6 +5,7 @@ import Login.User;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -16,12 +17,12 @@ public class EditSchedule
     public EditSchedule(User user) {
         this.user = user;
     }
-    public void loadSchedule(String day) throws IOException {
+    public void loadSchedule(String day) throws IOException, ParseException {
         ViewSchedule viewSchedule = new ViewSchedule(user);
         viewSchedule.loadFileToArray(daySchedule, day);
         runAgain();
     }
-    public void run() throws IOException {
+    public void run() throws IOException, ParseException {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -104,7 +105,7 @@ public class EditSchedule
         daySchedule.set(time, activity);
         writeToFile(daySchedule,day);
     }
-    public void runAgain() throws IOException {
+    public void runAgain() throws IOException, ParseException {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {

@@ -1,0 +1,2 @@
+Finance.Transaction Type: Income  Date: 2024-01-07T22:01:12.914877300   Amount: 500.0 Description: Income
+Finance.Transaction Type: Expense  Date: 2024-01-07T22:01:47.994268700   Amount: 200.0 Description: Gave to mom

@@ -6,6 +6,7 @@ import Login.UserInfoPrint;
 import MainMenu.MainMenu;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.Scanner;
 
 public class ScheduleManagement
@@ -15,7 +16,7 @@ public class ScheduleManagement
         this.user = user;
     }
 
-public void run() throws IOException {
+public void run() throws IOException, ParseException {
     Scanner scanner = new Scanner(System.in);
 
     while (true) {
