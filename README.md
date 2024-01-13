@@ -25,7 +25,7 @@ Myself App is a console application built in Java, aiming to assist you in effic
 
 1. Clone the repository.
 2. Compile the Java source code using `javac MyselfApp.java`.
-3. Run the application using `Main`.
+3. Run the application using the `Main.java` class.
 
 ## User Interface
 
