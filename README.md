@@ -25,7 +25,7 @@ Myself App is a console application built in Java, aiming to assist you in effic
 
 1. Clone the repository.
 2. Compile the Java source code using `javac MyselfApp.java`.
-3. Run the application using `java MyselfApp`.
+3. Run the application using `Main`.
 
 ## User Interface
 
@@ -38,11 +38,11 @@ Myself App utilizes a text-based interface to navigate its various features. The
 
 ## Security
 
-While the Myself App currently does not persistently store user data, future versions can implement data persistence using files or databases for enhanced security.
+While the Myself App currently does not persistently store user data, future versions can implement data persistence using databases for enhanced security.
 
 ## Future Development
 
-- Implement data persistence using files or databases.
+- Implement data persistence using file databases.
 - Introduce features such as generating reports, setting goals, and creating budgets.
 - Develop a graphical user interface (GUI) for a more user-friendly experience.
 
