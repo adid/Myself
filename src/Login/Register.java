@@ -53,7 +53,6 @@ public class Register {
             else
             {
                 System.out.println("Passwords do not match or password is not strong enough. Please try again.");
-            }
         }
 
         // Get user information
