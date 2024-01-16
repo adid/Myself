@@ -61,11 +61,13 @@ public class Main {
 
                     System.out.println("\nLogging out...");
                 } else {
+
                     System.out.println("\n******************************************");
                     System.out.println("*        \u001B[31mLogin Failed! Try again.\u001B[0m      *");
                     System.out.println("******************************************");
                 }
             } else if (input == 3) {
+                
                 System.out.println("\nExiting Myself Finance App...");
                 System.exit(0);
             } else {

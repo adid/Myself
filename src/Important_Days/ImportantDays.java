@@ -23,7 +23,8 @@ public class ImportantDays
         while (true) {
             System.out.println("Use the commands to continue:");
             System.out.println("1. View All Important days");
-            System.out.println("2. Add an Important day");
+            System.out.println("2. Add an Important day (Repeats Every Year)");
+            System.out.println("3. Add an Important day (Only once to happen)");
 
             System.out.println("-----------------------------");
             System.out.println("4. Back to Main Menu");
@@ -40,6 +41,12 @@ public class ImportantDays
             else if (input == 2)
             {
                 AddImportantDay addImportantDay = new AddImportantDay(user);
+                addImportantDay.run();
+            }
+
+            else if (input == 3)
+            {
+                AddTemporaryImportantDays addImportantDay = new AddTemporaryImportantDays(user);
                 addImportantDay.run();
             }
 

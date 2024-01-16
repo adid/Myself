@@ -19,6 +19,8 @@ public class ViewImportantDays
     public void run() throws IOException {
         ImportantDaysHandler.loadFileToArray(user,dates,"dates");
         ImportantDaysHandler.loadFileToArray(user,topics,"topics");
+        ImportantDaysHandler.loadFileToArray(user,dates,"TemporaryDates");
+        ImportantDaysHandler.loadFileToArray(user,topics,"TemporaryTopics");
 
         int minSize = Math.min(dates.size(), topics.size());
 

@@ -1,2 +1,0 @@
-Finance.Transaction Type:   Date: 2024-01-03T01:58:49.589555700   Amount: 500.0 Description: None
-Finance.Transaction Type: Income  Date: 2024-01-03T01:59:36.364256600   Amount: 500.0 Description: Salary

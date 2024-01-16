@@ -26,8 +26,9 @@ public class ShowToday
 
         int minSize = Math.min(dates.size(), topics.size());
 
+        LocalDate currentDate = LocalDate.now();
+
         for (int i = 0; i < minSize; i++) {
-            LocalDate currentDate = LocalDate.now();
             String inputDateStr = dates.get(i);
 
             // Parse the input date string to LocalDate
@@ -37,7 +38,39 @@ public class ShowToday
             // Check if the day and month components match (ignoring the year)
             if (currentDate.getMonth() == inputDate.getMonth() && currentDate.getDayOfMonth() == inputDate.getDayOfMonth()) {
                 System.out.println("Today is " + topics.get(i));
+                System.out.println("------------------------------------------");
             }
         }
+
+        dates.clear();
+        topics.clear();
+
+        ImportantDaysHandler.loadFileToArray(user,dates,"TemporaryDates");
+        ImportantDaysHandler.loadFileToArray(user,topics,"TemporaryTopics");
+
+        for (int i = 0; i <Math.min(dates.size(), topics.size()); i++) {
+            String inputDateStr = dates.get(i);
+
+            // Parse the input date string to LocalDate
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            LocalDate inputDate = LocalDate.parse(inputDateStr, formatter);
+
+            if (currentDate.isEqual(inputDate)) {
+                System.out.println("Today is " + topics.get(i));
+                System.out.println("------------------------------------------");
+            }
+            else if(inputDate.isBefore(currentDate)){
+                try {
+                    dates.remove(i);
+                    topics.remove(i);
+                    i--;
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+
+        ImportantDaysHandler.writeToFile(user,dates,"TemporaryDates");
+        ImportantDaysHandler.writeToFile(user,topics,"TemporaryTopics");
     }
 }
