@@ -1,10 +1,10 @@
-package MainMenu;
 
-import Finance.Finance_Management;
+import Finance.FinancialManagement;
 import Important_Days.ImportantDays;
 import Important_Days.ShowToday;
 import Login.*;
 import Schedule.ScheduleManagement;
+import Schedule.SchedulePrint;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -25,6 +25,9 @@ public class MainMenu
         System.out.println("******************************************");
         ShowToday showToday = new ShowToday(user);
         showToday.run();
+        System.out.println("******************************************");
+        SchedulePrint schedulePrint = new SchedulePrint(user);
+        schedulePrint.run();
         System.out.println("******************************************");
 
         boolean loggedIn = true;
@@ -48,7 +51,7 @@ public class MainMenu
                     userInfoPrint.printUserInfo();
                     break;
                 case 2:
-                    Finance_Management financeManagement = new Finance_Management(user);
+                    FinancialManagement financeManagement = new FinancialManagement(user);
                     financeManagement.run();
                     break;
                 case 3:

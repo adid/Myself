@@ -7,10 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef0f3806-2aaa-4e52-9b87-8fb8a73bb87b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e0e3968e-fcc6-42f6-b400-a7c2b0dac3e7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,50 +50,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/SPL&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalTools&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Downloaded.Files.Path.Enabled": "true",
-    "Repository.Attach.Annotations": "true",
-    "Repository.Attach.JavaDocs": "true",
-    "Repository.Attach.Sources": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "F:/SPL last",
+    "last_opened_file_path": "C:/SPL-Project-1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
->>>>>>> Stashed changes
   }
 }]]></component>
   <component name="RecentsManager">
@@ -193,16 +159,13 @@
       <workItem from="1704565328448" duration="6518000" />
       <workItem from="1704639970309" duration="398000" />
       <workItem from="1704694366807" duration="61000" />
-
       <workItem from="1704695163210" duration="2960000" />
       <workItem from="1705386718716" duration="1012000" />
-=======
       <workItem from="1704695377110" duration="1332000" />
       <workItem from="1704738843035" duration="1078000" />
       <workItem from="1705412103032" duration="2121000" />
       <workItem from="1705422404779" duration="130000" />
       <workItem from="1705422548715" duration="53000" />
->>>>>>> Stashed changes
     </task>
     <servers />
   </component>
