@@ -16,12 +16,6 @@ public class CreateSchedule {
         this.user = user;
     }
 
-    public void createScheduleFile() throws IOException {
-        String path = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Schedule";
-        File folder= new File(path);
-        folder.mkdir();
-    }
-
     public void writeToFile(ArrayList<String> schedule ,String day) throws IOException {
         String directoryPath = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Schedule\\";
         String path = directoryPath + day + ".txt";
@@ -91,7 +85,6 @@ public class CreateSchedule {
     }
 
     public void run() throws IOException {
-        createScheduleFile();
 
         System.out.println("Saturday: ");
         dailySchedule();

@@ -1,8 +1,6 @@
 package Schedule;
 
-import Finance.Finance_Management;
 import Login.User;
-import Login.UserInfoPrint;
 import MainMenu.MainMenu;
 
 import java.io.IOException;
@@ -17,8 +15,6 @@ public class ScheduleManagement
     }
 
 public void run() throws IOException, ParseException {
-    Scanner scanner = new Scanner(System.in);
-
     while (true) {
         System.out.println("Use the commands to continue:");
         System.out.println("1. View Schedule");
@@ -28,6 +24,8 @@ public void run() throws IOException, ParseException {
         System.out.println("4. Back to Main Menu");
         System.out.println("5. Exit");
         System.out.print("Enter your choice: ");
+
+        Scanner scanner = new Scanner(System.in);
 
         int input = scanner.nextInt();
 
@@ -63,6 +61,7 @@ public void run() throws IOException, ParseException {
         else
         {
             System.out.println("Invalid input. Please try again.");
+            run();
         }
     }
 }
