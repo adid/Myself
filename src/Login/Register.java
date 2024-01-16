@@ -1,15 +1,14 @@
 package Login;
 
+import MainMenu.MainMenu;
+import MainMenu.ClearConsole;
+
 import java.io.File;
-import java.lang.*;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
-
-import Finance.Finance_Management;
-import MainMenu.MainMenu;
 
 public class Register {
 
@@ -29,6 +28,7 @@ public class Register {
     public void register() throws IOException, ParseException {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("** Sign Up Page **\n");
         // Get user input for username and password
         System.out.print("Enter a username: ");
         String username = scanner.nextLine();
@@ -53,6 +53,7 @@ public class Register {
             else
             {
                 System.out.println("Passwords do not match or password is not strong enough. Please try again.");
+            }
         }
 
         // Get user information
@@ -135,17 +136,17 @@ public class Register {
         // Attempt to create an account
         try {
             if(createUser.createAccount()) {
+                ClearConsole.clearConsole();
                 System.out.println("Account created successfully.");
+                MainMenu menu = new MainMenu(user);
+                menu.run();
+                scanner.close();
             } else {
                 System.out.println("Account creation failed.");
             }
         } catch (IOException e) {
             System.err.println("Error creating account: " + e.getMessage());
         }
-
-        MainMenu menu = new MainMenu(user);
-        menu.run();
-        scanner.close();
     }
 
     public static boolean isStrongPassword(String password) {

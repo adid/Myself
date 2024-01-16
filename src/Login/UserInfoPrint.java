@@ -14,6 +14,10 @@ public class UserInfoPrint
         this.user = user;
     }
 
+    public ArrayList<String> getUserInfo() {
+        return userInfo;
+    }
+
     public void loadUserInfo() {
         String path = "C:\\SPL\\Data\\"+ user.getUsername()+"\\UserInfo.txt";
 

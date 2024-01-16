@@ -99,12 +99,20 @@ public class CreateUser
         folder.mkdir();
         String dates = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Important Days\\dates.txt";
         String topics = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Important Days\\topics.txt";
+        String tempdates = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Important Days\\TemporaryDates.txt";
+        String temptopics = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Important Days\\TemporaryTopics.txt";
+
+
 
         File datefile= new File(dates);
         File topicfile= new File(topics);
+        File tempdatefile= new File(tempdates);
+        File temptopicfile= new File(temptopics);
 
         FileWriter myWriter0 = new FileWriter(datefile);
         FileWriter myWriter1 = new FileWriter(topicfile);
+        FileWriter myWriter2 = new FileWriter(tempdatefile);
+        FileWriter myWriter3 = new FileWriter(temptopicfile);
     }
 
     public void createTransactionFile() throws IOException {
@@ -113,22 +121,16 @@ public class CreateUser
         folder.mkdir();
 
         String path0 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Transactions\\Transaction_no.txt";
-        String path1 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Transactions\\Date.txt";
-        String path2 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Transactions\\Transaction_Type.txt";
-        String path3 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Transactions\\Amount.txt";
-        String path4 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Transactions\\Description.txt";
+        String path1 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Transactions\\Borrow.txt";
+        String path2 = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Transactions\\Lend.txt";
 
         File noFile= new File(path0);
         File dateFile= new File(path1);
         File typeFile= new File(path2);
-        File amountFile= new File(path3);
-        File descriptionFile= new File(path4);
 
         FileWriter myWriter0 = new FileWriter(noFile);
         FileWriter myWriter1 = new FileWriter(dateFile);
         FileWriter myWriter2 = new FileWriter(typeFile);
-        FileWriter myWriter3 = new FileWriter(amountFile);
-        FileWriter myWriter4 = new FileWriter(descriptionFile);
     }
 
     public boolean checkUser() {
@@ -153,6 +155,57 @@ public class CreateUser
         return true;
     }
 
+    public void createScheduleFile() throws IOException {
+        String path = "C:\\SPL\\Data\\"+ user.getUsername()+"\\Schedule";
+        File folder= new File(path);
+        folder.mkdir();
+    }
+
+    public void writeToFile(String day) throws IOException {
+        String directoryPath = "C:\\SPL\\Data\\" + user.getUsername() + "\\Schedule\\";
+        String path = directoryPath + day + ".txt";
+        File dayFile = new File(path);
+        FileWriter myWriter0 = new FileWriter(dayFile);
+    }
+
+    void createDayFiles(){
+        try {
+            writeToFile("Saturday");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            writeToFile("Sunday");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            writeToFile("Monday");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            writeToFile("Tuesday");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            writeToFile("Wednesday");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            writeToFile("Thursday");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            writeToFile("Friday");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public boolean createAccount() throws IOException {
         if (checkUser() ){
             createUserFile();
@@ -162,6 +215,8 @@ public class CreateUser
             createLoanFile();
             createTransactionFile();
             createImportantDaysFile();
+            createScheduleFile();
+            createDayFiles();
             return true;
         }
         return false;
