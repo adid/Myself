@@ -2,13 +2,14 @@ package Finance;
 
 import Login.User;
 
-import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class LoanManagement {
     private TransactionsManager transactionsManager;
@@ -47,8 +48,46 @@ public class LoanManagement {
 
         System.out.println("Select index of Borrow list to return: ");
         int select = scanner.nextInt();
-        System.out.println("Confirm Amount: ");
+
+        if (select < 0 || select >= borrowArray.size()) {
+            System.out.println("Invalid index selected. Please try again.");
+            return;
+        }
+
+        System.out.println("Amount to return: ");
         double amount = scanner.nextDouble();
+
+        Pattern amountPattern = Pattern.compile("Amount: (\\d+\\.\\d+)");
+        Matcher matcher = amountPattern.matcher(borrowArray.get(select));
+        double extractAmount;
+
+        if (!matcher.find()) {
+            System.out.println("Error!");
+            run();
+            return;
+        }
+
+        String amountString = matcher.group(1);
+        extractAmount = Double.parseDouble(amountString);
+
+        if(extractAmount<amount)
+        {
+            borrowArray.clear();
+            lendArray.clear();
+            System.out.println("Error! You can not return more amount than borrowed");
+            run();
+            return;
+        }
+
+        else if(extractAmount==amount)
+        {
+            borrowArray.remove(select);
+        }
+
+        else
+        {
+            borrowArray.set(select,borrowArray.get(select).replace(amountString, String.valueOf(extractAmount-amount)));
+        }
 
         scanner.nextLine();
 
@@ -58,7 +97,6 @@ public class LoanManagement {
         transactionsManager.saveBalanceToFile(balance);
         transactionsManager.saveLoanBalanceToFile(loanBalance);
 
-        borrowArray.remove(select);
         LoanFileHandler.writeToFile(user,borrowArray,"Borrow");
     }
 
@@ -71,8 +109,45 @@ public class LoanManagement {
         System.out.println("Select index of Lend list which you got: ");
         int select = scanner.nextInt();
 
-        System.out.println("Confirm Amount: ");
+        if (select < 0 || select >= lendArray.size()) {
+            System.out.println("Invalid index selected. Please try again.");
+            return;
+        }
+
+        System.out.println("Amount to take: ");
         double amount = scanner.nextDouble();
+
+        Pattern amountPattern = Pattern.compile("Amount: (\\d+\\.\\d+)");
+        Matcher matcher = amountPattern.matcher(lendArray.get(select));
+        double extractAmount;
+
+        if (!matcher.find()) {
+            System.out.println("Error!");
+            run();
+            return;
+        }
+
+        String amountString = matcher.group(1);
+        extractAmount = Double.parseDouble(amountString);
+
+        if(extractAmount<amount)
+        {
+            lendArray.clear();
+            borrowArray.clear();
+            System.out.println("Error! You can not get more amount than lent");
+            run();
+            return;
+        }
+
+        else if(extractAmount==amount)
+        {
+            lendArray.remove(select);
+        }
+
+        else
+        {
+            lendArray.set(select,lendArray.get(select).replace(amountString, String.valueOf(extractAmount-amount)));
+        }
 
         scanner.nextLine();
 
@@ -82,7 +157,6 @@ public class LoanManagement {
         transactionsManager.saveBalanceToFile(balance);
         transactionsManager.saveLoanBalanceToFile(loanBalance);
 
-        lendArray.remove(select);
         LoanFileHandler.writeToFile(user,lendArray,"Lend");
     }
 

@@ -7,7 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0e3968e-fcc6-42f6-b400-a7c2b0dac3e7" name="Changes" comment="" />
+    <list default="true" id="e0e3968e-fcc6-42f6-b400-a7c2b0dac3e7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Finance/LoanManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Finance/LoanManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Finance/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Finance/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainMenu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu/MainMenu.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,21 +55,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/SPL-Project-1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/SPL-Project-1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Important_Days" />
@@ -116,7 +121,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ef0f3806-2aaa-4e52-9b87-8fb8a73bb87b" name="Changes" comment="" />
+      <changelist id="e0e3968e-fcc6-42f6-b400-a7c2b0dac3e7" name="Changes" comment="" />
       <created>1694373240780</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -166,6 +171,7 @@
       <workItem from="1705412103032" duration="2121000" />
       <workItem from="1705422404779" duration="130000" />
       <workItem from="1705422548715" duration="53000" />
+      <workItem from="1705426965287" duration="1239000" />
     </task>
     <servers />
   </component>

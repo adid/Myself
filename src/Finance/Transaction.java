@@ -21,6 +21,14 @@ class Transaction
         this.dateTime= LocalDateTime.now();
     }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
     public String getDescription()
     {
         return description;

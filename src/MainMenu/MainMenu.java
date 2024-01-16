@@ -1,3 +1,4 @@
+package MainMenu;
 
 import Finance.FinancialManagement;
 import Important_Days.ImportantDays;
