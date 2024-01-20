@@ -1,6 +1,6 @@
 # Myself App: Your Personal Management Tool in Java
 
-Myself App is a console application built in Java, aiming to assist you in efficiently managing your finances, schedule, and essential dates.
+Myself App is a console application built in Java, aiming to assist you in efficiently managing your finances, schedule, and important dates. It serves individuals to manage their daily life using technology efficiently.
 
 ## Features
 
