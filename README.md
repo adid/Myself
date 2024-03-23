@@ -2,6 +2,14 @@
 
 Myself App is a console application built in Java, aiming to assist you in efficiently managing your finances, schedule, and important dates. It serves individuals to manage their daily life using technology efficiently.
 
+
+## Before Running the App
+
+-	All the exception aren't handled. So, give proper values for each input.
+- We've used text files instead of Database. So, for data storing and retrieving you need to create path: "C:\SPL\Data". <vr>
+Before running the project run the following command in your command prompt: <br>
+`mkdir C:\SPL\Data`
+
 ## Features
 
 ### Finance Management
